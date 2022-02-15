@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { HiPlus } from "react-icons/hi";
-import Card from "./Card";
+import { Card } from "./Card";
 import axios from "axios";
 // import Tabel from "./Tabel";
 
@@ -24,15 +24,36 @@ export default function App() {
 
   const ubah = (id) => {
     const url = "http://localhost:3005/post/" + id.id;
+
     // const ccard = JSON.parse(JSON.stringify(card));
     // const card = ccard[index]
     // console.log(id.warna);
+
     axios.patch(url, { warna: id.warna + 1 }).then((respon) => {
       axios.get("http://localhost:3005/post").then((respon) => {
         tambahcard(respon.data);
       });
     });
   };
+
+  // const fungsipluscard = (data) => {
+  //   data.preventDefault();
+  //   const label = data.target.label.value;
+  //   const url = "http://localhost:3005/post";
+  //   const up = { label, status: "card", warna: 0 };
+  //   axios
+  //     .post(url, up)
+  //     .then((respon) => {
+  //       axios
+  //         .get(url)
+  //         .then((respon) => {
+  //           tambahcard(respon.data);
+  //         })
+  //         .catch((y) => {});
+  //     })
+  //     .catch((x) => {});
+  //   data.target.label.value = "";
+  // };
 
   const fungsipluscard = (data) => {
     data.preventDefault();

@@ -3,20 +3,26 @@
     {
       "label": "satu",
       "status": "card",
-      "warna": 2,
+      "warna": 36,
       "id": 1
     },
     {
       "label": "dua",
       "status": "card",
-      "warna": 0,
+      "warna": 1,
       "id": 2
     },
     {
       "label": "tiga",
       "status": "card",
-      "warna": 0,
+      "warna": 10,
       "id": 3
+    },
+    {
+      "label": "empat",
+      "status": "card",
+      "warna": 10,
+      "id": 4
     }
   ],
   "profile": {
